@@ -16,6 +16,7 @@ Feature: Cheapoair Flight search functionality
     Given  user is on the Cheapoair homepage
     When user searches for the available flights for the future dates
     Then verify user should see the available flights results
+
 #    negative case:
   Scenario: Verify user is able to validate the mandatory search fields for fields for flight search
     Given user is on  the Cheapoair homepage
