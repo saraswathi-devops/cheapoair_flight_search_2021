@@ -10,6 +10,7 @@ Feature: Cheapoair Flight search functionality
     And user searches for available for flights
     Then verify user should see the available flights results
 
+
 #Declarative style
   Scenario:verify user is able to search for the available flights for a future dates in Declarative style
     Given  user is on the Cheapoair homepage
