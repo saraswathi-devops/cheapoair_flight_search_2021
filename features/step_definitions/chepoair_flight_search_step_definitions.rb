@@ -1,7 +1,6 @@
 Given(/^user is on the Cheapoair homepage$/) do
   visit CheapoairHomePageClass
   on(CheapoairHomePageClass).maximizing_window
-#  nothing
 end
 
 When(/^user selects the Round Trip$/) do
