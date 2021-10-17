@@ -1,5 +1,4 @@
 Feature: Cheapoair Flight search functionality
-#  testing the changes in the file
 
   Scenario:verify user is able to search for the available flights for a future dates
     Given  user is on the Cheapoair homepage
