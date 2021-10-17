@@ -1,0 +1,2 @@
+class CheapoairHotelsPage
+end
