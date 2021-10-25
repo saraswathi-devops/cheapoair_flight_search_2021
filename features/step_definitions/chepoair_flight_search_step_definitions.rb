@@ -33,3 +33,32 @@ Then(/^verify user should see the available flights results$/) do
   on(CheapoairHomePageClass).verify_flight_results
 end
 
+When(/^user searches for the available flights for the future dates$/) do
+  on(CheapoairHomePageClass) do |page|
+    page.select_round_trip
+    page.round_trip_tab_element.click if page.round_trip_tab_element.present?
+    page.round_trip_tab.click if page.round_trip_tab_element.present?
+    page.search_dep_airport dep_city, dep_airport_code
+    page.search_arr_airport arr_city, arr_airport_code
+    page.choose_dep_date no_of_days
+    page.choose_arr_date no_of_days
+    page.search_flights
+  end
+  step "user is on the Cheapoair homepage"
+  step "user selects the Round Trip"
+  step "user search the "Columbus" city and selects "CMH" airport for departure"
+  step "user search for "Cleveland" city and selects "CLE" airport for arrival"
+  step "user selects future dates for departure 11 days from today"
+  step "user selects future dates for arrival 15 days from today"
+  step "user searches for available for flights"
+end
+
+steps %Q{
+Given  user is on the Cheapoair homepage
+    When user selects the Round Trip
+    And user search the "Columbus" city and selects "CMH" airport for departure
+    And user search for "Cleveland" city and selects "CLE" airport for arrival
+    And user selects future dates for departure 11 days from today
+    And user selects future dates for arrival 15 days from today
+    And user searches for available for flights
+      }
