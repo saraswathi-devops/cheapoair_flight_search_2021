@@ -1,9 +1,9 @@
-class CheapoairHomePageClass
+class CheapoairHomePage
   include PageObject
   page_url "www.cheapoair.com"
 
   radio(:round_trip_tab, id: 'roundTrip')
-
+  radio(:hotels_tab, id: 'roundTrip')
 
   def maximizing_window
     @browser.driver.manage.window.maximize

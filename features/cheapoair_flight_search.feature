@@ -1,10 +1,10 @@
 Feature: Cheapoair Flight search functionality
 
   Scenario:verify user is able to search for the available flights for a future dates
-    Given  user is on the Cheapoair homepage
+    Given user is on the Cheapoair homepage
     When user selects the Round Trip
-    And user search the "Columbus" city and selects "CMH" airport for departure
-    And user search for "Cleveland" city and selects "CLE" airport for arrival
+    And user search the Columbus city and selects CMH airport for departure
+    And user search for Cleveland city and selects CLE airport for arrival
     And user selects future dates for departure 11 days from today
     And user selects future dates for arrival 15 days from today
     And user searches for available for flights
@@ -17,7 +17,8 @@ Feature: Cheapoair Flight search functionality
     When user searches for the available flights for the future dates
     Then verify user should see the available flights results
 
-#    negative case:
+
+#    negative case
   Scenario: Verify user is able to validate the mandatory search fields for fields for flight search
     Given user is on  the Cheapoair homepage
     When user selects the Round Trip
